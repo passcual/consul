@@ -50,7 +50,7 @@ class Proposal < ActiveRecord::Base
       tags: :name
     },
     using: {
-      tsearch: { dictionary: "spanish" },
+      tsearch: { dictionary: "spanish", tsvector_column: 'tsv' },
       trigram: { threshold: 0.1 },
     },
     ranked_by: '(:tsearch + proposals.cached_votes_up)',

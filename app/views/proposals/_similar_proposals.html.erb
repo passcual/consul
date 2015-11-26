@@ -1,0 +1,13 @@
+<% cache [locale_and_user_status] do %>
+  <section class="similar proposals">
+    <div class="row">
+      <div id="similars" class="small-12 column">
+        <h2>
+          <%= t("proposals.show.similar_proposals_title") %>
+          <span class="js-similar-count">(<%= @proposal.similar_count %>)</span>
+          <p><a href <%= @proposal.external_url %> > <%= @proposal.title %> </a> 
+        </h2>
+      </div>
+    </div>
+  </section>
+<% end %>

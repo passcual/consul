@@ -6,7 +6,7 @@ es:
   layouts:
     header:
       logo: "Madrid"
-      external_link_transparency: "Transparencia"
+      external_link_transparency: "Transpareconcia"
       external_link_transparency_url: "http://www.madrid.es/portales/munimadrid/es/Inicio/El-Ayuntamiento/Transparencia?vgnextfmt=default&vgnextchannel=20fd850769797310VgnVCM2000000c205a0aRCRD"
       external_link_opendata: "Datos abiertos"
       external_link_opendata_url: "http://datos.madrid.es"
@@ -217,6 +217,7 @@ es:
       edit_proposal_link: "Editar propuesta"
       share: "Compartir"
       flag: "Esta propuesta ha sido marcada como inapropiada por varios usuarios."
+      similar_proposals_title: "Propuestas similares"
     edit:
       editing: "Editar propuesta"
       show_link: "Ver propuesta"

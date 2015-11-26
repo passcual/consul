@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151103194329) do
+ActiveRecord::Schema.define(version: 20151126101910) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -215,6 +215,7 @@ ActiveRecord::Schema.define(version: 20151103194329) do
     t.text     "summary"
     t.string   "video_url"
     t.integer  "physical_votes",               default: 0
+    t.integer  "similar_count",                default: 0
   end
 
   add_index "proposals", ["author_id", "hidden_at"], name: "index_proposals_on_author_id_and_hidden_at", using: :btree
@@ -234,6 +235,11 @@ ActiveRecord::Schema.define(version: 20151103194329) do
   end
 
   add_index "settings", ["key"], name: "index_settings_on_key", using: :btree
+
+  create_table "similar_proposals", force: :cascade do |t|
+    t.integer "proposals_id"
+    t.integer "similar_proposals_id"
+  end
 
   create_table "simple_captcha_data", force: :cascade do |t|
     t.string   "key",        limit: 40

@@ -13,6 +13,7 @@ class Proposal < ActiveRecord::Base
 
   belongs_to :author, -> { with_hidden }, class_name: 'User', foreign_key: 'author_id'
   has_many :comments, as: :commentable
+  has_many :similar_proposal
 
   validates :title, presence: true
   validates :question, presence: true
@@ -38,6 +39,9 @@ class Proposal < ActiveRecord::Base
   scope :sort_by_most_commented, -> { order(comments_count: :desc) }
   scope :sort_by_random, -> { order("RANDOM()") }
   scope :sort_by_flags, -> { order(flags_count: :desc, updated_at: :desc) }
+
+  scope :join_similar, -> { joins(:similar_proposal) }
+
 
   pg_search_scope :pg_search, {
     against: {

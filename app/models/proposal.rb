@@ -61,6 +61,10 @@ class Proposal < ActiveRecord::Base
     order_within_rank: "proposals.created_at DESC"
   }
 
+  def similars(id)
+    SimilarProposal.where("proposals_id = ?", id)
+  end
+
   def description
     super.try :html_safe
   end

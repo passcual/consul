@@ -76,7 +76,7 @@
            <%= render 'votes',
                       { proposal: @proposal, vote_url: vote_proposal_path(@proposal, value: 'yes') } %>
           </div>
-        </div>PP
+        </div>
         <div class="sidebar-divider"></div>
         <h3><%= t("proposals.show.share") %></h3>
         <%= social_share_button_tag(@proposal.title) %>
@@ -84,5 +84,5 @@
     </div>
   </section>
 <% end %>
-<%= render "proposals/similar_proposals", i18n_namespace: "proposals.index" %>
+<%= render "proposals/similar_proposals" %>
 <%= render "proposals/comments" %>

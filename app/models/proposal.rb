@@ -62,7 +62,8 @@ class Proposal < ActiveRecord::Base
   }
 
   def similars(id)
-    SimilarProposal.where("proposals_id = ?", id)
+    # SimilarProposal.where("proposals_id = ?", id)
+    Proposal.where("id in (select similar_proposals_id from similar_proposals where proposals_id = ?)", id)
   end
 
   def description

@@ -1,18 +1,16 @@
 
   <section class="similar proposals">
     <div class="row">
-      <div id="similars" class="small-12 column">
+      <div class="more-information text small-12 medium-8 column">
         <h2>
           <%= t("proposals.show.similar_proposals_title") %>
           (<%= @proposal.similar_count %>)
         </h2>
-          <p><a href <%= @proposal.external_url %> > <%= @proposal.title %> </a>
-          
           <table>
             <tr>
               <% @proposal.similars(@proposal.id).each do |s| %>
               <td>
-                <%= s.similar_proposals_id %>
+                <a href="<%= s.id %>"> <%= s.title %> </a>
               </td>
               <% end %>
             </tr>

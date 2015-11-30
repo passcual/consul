@@ -218,6 +218,7 @@ en:
       share: "Share"
       flag: "This proposal has been flagged as inappropriate by several users."
       similar_proposals_title: "Similar proposals"
+      similar_proposals_show: "Show all similar proposals"
     edit:
       editing: "Edit proposal"
       show_link: "View proposal"

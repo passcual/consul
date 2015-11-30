@@ -218,6 +218,7 @@ es:
       share: "Compartir"
       flag: "Esta propuesta ha sido marcada como inapropiada por varios usuarios."
       similar_proposals_title: "Propuestas similares"
+      similar_proposals_show: "Ver todas las propuestas similares"
     edit:
       editing: "Editar propuesta"
       show_link: "Ver propuesta"
